@@ -34,16 +34,16 @@ class App:
         self.canvas = tk.Canvas(self.window, width=self.camera.width, height=self.camera.height)
         self.canvas.pack()
 
-        self.btn_toggleauto = tk.Button(self.window, text="Toggle Counting", command=self.counting_toggle)
+        self.btn_toggleauto = tk.Button(self.window, text="Toggle Counting", width=50, command=self.counting_toggle)
         self.btn_toggleauto.pack(anchor=tk.CENTER, expand=True)
 
-        self.btn_class_one = tk.Button(self.window, text="Extended", command=lambda: self.save_for_class(1))
+        self.btn_class_one = tk.Button(self.window, text="Extended", width=50, command=lambda: self.save_for_class(1))
         self.btn_toggleauto.pack(anchor=tk.CENTER, expand=True)
 
     def counting_toggle(self):
         pass
 
-    def save_for_class():
+    def save_for_class(self, class_num):
         pass
 
     def update(self):
