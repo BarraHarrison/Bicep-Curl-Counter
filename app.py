@@ -62,6 +62,8 @@ class App:
         ret, frame = self.camera.get_frame()
         if not os.path.exists("1"):
             os.mkdir("1")
+        if not os.path.exists("2"):
+            os.mkdir("2")
 
     def update(self):
         pass
