@@ -35,8 +35,15 @@ class App:
         self.canvas.pack()
 
         self.btn_toggleauto = tk.Button(self.window, text="Toggle Counting", command=self.counting_toggle)
+        self.btn_toggleauto.pack(anchor=tk.CENTER, expand=True)
 
-    def counting_toggle():
+        self.btn_class_one = tk.Button(self.window, text="Extended", command=lambda: self.save_for_class(1))
+        self.btn_toggleauto.pack(anchor=tk.CENTER, expand=True)
+
+    def counting_toggle(self):
+        pass
+
+    def save_for_class():
         pass
 
     def update(self):
