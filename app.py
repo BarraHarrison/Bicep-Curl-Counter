@@ -18,6 +18,8 @@ class App:
         self.contracted = False
         self.last_prediction = 0
 
+        self.model = None
+
         self.counting_enabled = False
 
         self.camera = camera.Camera()
@@ -46,6 +48,9 @@ class App:
         self.btn_train = tk.Button(self.window, text="Train Model", width=50, command=lambda: self.model.train_model(self.counters))
         self.btn_train.pack(anchor=tk.CENTER, expand=True)
 
+        self.btn_reset = tk.Button(self.window, text="Reset", width=50, command=self.reset)
+        self.btn_reset.pack(anchor=tk.CENTER, expand=True)
+
     def counting_toggle(self):
         pass
 
@@ -53,4 +58,7 @@ class App:
         pass
 
     def update(self):
+        pass
+
+    def reset(self):
         pass
