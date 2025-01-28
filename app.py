@@ -59,9 +59,14 @@ class App:
         self.counting_enabled = not self.counting_enabled
 
     def save_for_class(self, class_num):
-        pass
+        ret, frame = self.camera.get_frame()
+        if not os.path.exists("1"):
+            os.mkdir("1")
 
     def update(self):
+        pass
+    
+    def predict(self):
         pass
 
     def reset(self):
