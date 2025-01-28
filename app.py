@@ -35,3 +35,9 @@ class App:
         self.canvas.pack()
 
         self.btn_toggleauto = tk.Button(self.window, text="Toggle Counting", command=self.counting_toggle)
+
+    def counting_toggle():
+        pass
+
+    def update(self):
+        pass
