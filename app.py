@@ -43,6 +43,9 @@ class App:
         self.btn_class_two = tk.Button(self.window, text="Contracted", width=50, command=lambda: self.save_for_class(2))
         self.btn_class_two.pack(anchor=tk.CENTER, expand=True)
 
+        self.btn_train = tk.Button(self.window, text="Train Model", width=50, command=lambda: self.model.train_model(self.counters))
+        self.btn_train.pack(anchor=tk.CENTER, expand=True)
+
     def counting_toggle(self):
         pass
 
