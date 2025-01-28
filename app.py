@@ -56,7 +56,7 @@ class App:
         self.counter_label.pack(anchor=tk.CENTER, expand=True)
 
     def counting_toggle(self):
-        pass
+        self.counting_enabled = not self.counting_enabled
 
     def save_for_class(self, class_num):
         pass
@@ -65,4 +65,4 @@ class App:
         pass
 
     def reset(self):
-        pass
+        self.rep_counter = 0
