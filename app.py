@@ -38,7 +38,10 @@ class App:
         self.btn_toggleauto.pack(anchor=tk.CENTER, expand=True)
 
         self.btn_class_one = tk.Button(self.window, text="Extended", width=50, command=lambda: self.save_for_class(1))
-        self.btn_toggleauto.pack(anchor=tk.CENTER, expand=True)
+        self.btn_class_one.pack(anchor=tk.CENTER, expand=True)
+
+        self.btn_class_two = tk.Button(self.window, text="Contracted", width=50, command=lambda: self.save_for_class(2))
+        self.btn_class_two.pack(anchor=tk.CENTER, expand=True)
 
     def counting_toggle(self):
         pass
