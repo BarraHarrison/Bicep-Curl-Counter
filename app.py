@@ -10,3 +10,9 @@ class App:
     def __init__(self):
         self.window = tk.Tk()
         self.window.title = "Bicep-Curl Counter"
+
+        self.counters = [1, 1]
+        self.rep_counter = 0
+
+        self.extended = False
+        self.contracted = False
