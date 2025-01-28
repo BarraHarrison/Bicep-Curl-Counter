@@ -65,6 +65,8 @@ class App:
         if not os.path.exists("2"):
             os.mkdir("2")
 
+        cv2.imwrite(f"{class_num}/frame{self.counters[class_num-1]}.jpg", cv2.cvtColor(frame, cv2.COLOR_RGB2GRAY))
+
     def update(self):
         pass
     
