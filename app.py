@@ -31,4 +31,7 @@ class App:
         self.window.mainloop()
 
     def init_gui(self):
-        pass
+        self.canvas = tk.Canvas(self.window, width=self.camera.width, height=self.camera.height)
+        self.canvas.pack()
+
+        self.btn_toggleauto = tk.Button(self.window, text="Toggle Counting", command=self.counting_toggle)
