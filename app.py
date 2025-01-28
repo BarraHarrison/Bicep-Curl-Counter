@@ -16,3 +16,19 @@ class App:
 
         self.extended = False
         self.contracted = False
+        self.last_prediction = 0
+
+        self.counting_enabled = False
+
+        self.camera = camera.Camera()
+
+        self.init_gui()
+
+        self.delay = 15
+        self.update()
+
+        self.window.attributes("-topmost", True)
+        self.window.mainloop()
+
+    def init_gui(self):
+        pass
