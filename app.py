@@ -74,7 +74,20 @@ class App:
         self.counters[class_num-1] += 1
 
     def update(self):
-        pass
+        if self.counting_enabled:
+            self.predict()
+
+        if self.extended and self.contracted:
+            self.extended, self.contracted = False, False
+            self.rep_counter += 1
+        self.counter_label.config(text=f"{self.rep_counter}")
+
+        ret, frame = self.camera.get_frame()
+        if ret:
+            self.photo = PIL.ImageTk.PhotoImage(image=PIL.Image.fromarray(frame))
+            self.canvas.create_image(0, 0, image=self.photo, anchor=tk.NW)
+        
+        self.window.after(self.delay, self.update)
     
     def predict(self):
         frame = self.camera.get_frame()
