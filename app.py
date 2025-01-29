@@ -80,5 +80,13 @@ class App:
         frame = self.camera.get_frame()
         prediction = self.model.predict(frame)
 
+        if prediction != self.last_prediction:
+            if prediction == 1:
+                self.extended = True
+                self.last_prediction = 1
+            if prediction == 2:
+                self.contracted = True
+                self.last_prediction = 2
+
     def reset(self):
         self.rep_counter = 0
