@@ -28,3 +28,9 @@ class Model():
         img_list = img_list.reshape(counters[0] - 1 + counters[1] - 1, 16950)
         self.model.fit(img_list, class_list)
         print("Model successfully trained!")
+
+    def predict_function(self, frame):
+        frame = frame[1]
+        cv2.imwrite("frame.jpg", cv2.cvtColor(frame, cv2.COLOR_RGB2GRAY))
+        img = PIL.Image.open("frame.jpg")
+        img.thumbnail((150,150), PIL.Image.ANTIALIAS)
