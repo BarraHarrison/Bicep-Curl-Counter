@@ -38,5 +38,5 @@ class Model():
 
         img = cv2.imread("frame.jpg")[:,:,0]
         img = img.reshape(16950)
-        prediction = self.model.predict_function([img])
+        prediction = self.model.predict([img])
         return prediction[0]
