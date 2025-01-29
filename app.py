@@ -4,6 +4,7 @@ import os
 import PIL.Image, PIL.ImageTk
 import cv2 
 import camera
+import model
 
 class App:
 
@@ -18,7 +19,7 @@ class App:
         self.contracted = False
         self.last_prediction = 0
 
-        self.model = None
+        self.model = model.Model()
 
         self.counting_enabled = False
 
@@ -76,7 +77,8 @@ class App:
         pass
     
     def predict(self):
-        pass
+        frame = self.camera.get_frame()
+        prediction = self.model.predict(frame)
 
     def reset(self):
         self.rep_counter = 0
