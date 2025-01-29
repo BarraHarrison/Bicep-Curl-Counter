@@ -37,19 +37,21 @@ class App:
         self.canvas = tk.Canvas(self.window, width=self.camera.width, height=self.camera.height)
         self.canvas.pack()
 
-        self.btn_toggleauto = tk.Button(self.window, text="Toggle Counting", width=50, command=self.counting_toggle)
+        button_style = {"width": 50, "bg": "lightblue", "fg": "black", "font": ("Arial", 12)}
+
+        self.btn_toggleauto = tk.Button(self.window, text="Toggle Counting", command=self.counting_toggle, **button_style)
         self.btn_toggleauto.pack(anchor=tk.CENTER, expand=True)
 
-        self.btn_class_one = tk.Button(self.window, text="Extended", width=50, command=lambda: self.save_for_class(1))
+        self.btn_class_one = tk.Button(self.window, text="Extended", command=lambda: self.save_for_class(1), **button_style)
         self.btn_class_one.pack(anchor=tk.CENTER, expand=True)
 
-        self.btn_class_two = tk.Button(self.window, text="Contracted", width=50, command=lambda: self.save_for_class(2))
+        self.btn_class_two = tk.Button(self.window, text="Contracted", command=lambda: self.save_for_class(2), **button_style)
         self.btn_class_two.pack(anchor=tk.CENTER, expand=True)
 
-        self.btn_train = tk.Button(self.window, text="Train Model", width=50, command=lambda: self.model.train_model(self.counters))
+        self.btn_train = tk.Button(self.window, text="Train Model", command=lambda: self.model.train_model(self.counters), **button_style)
         self.btn_train.pack(anchor=tk.CENTER, expand=True)
 
-        self.btn_reset = tk.Button(self.window, text="Reset", width=50, command=self.reset)
+        self.btn_reset = tk.Button(self.window, text="Reset", command=self.reset, **button_style)
         self.btn_reset.pack(anchor=tk.CENTER, expand=True)
 
         self.counter_label = tk.Label(self.window, text=f"{self.rep_counter}")
