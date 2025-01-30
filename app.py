@@ -90,7 +90,7 @@ class App:
         self.counters[class_num-1] += 1
 
     def update(self):
-        if self.window.winfo_exists():
+        if hasattr(self, "window") and self.window.winfo_exists():
             if self.counting_enabled:
                 self.predict()
 
