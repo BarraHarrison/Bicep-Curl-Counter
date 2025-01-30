@@ -5,10 +5,11 @@ class Camera:
     def __init__(self):
         self.camera = cv2.VideoCapture(0)
         if not self.camera.isOpened():
-            raise ValueError("Camera not found")
+            raise ValueError("Camera not found or accessible.")
         
-        self.width = self.camera.get(cv2.CAP_PROP_FRAME_WIDTH)
-        self.height = self.camera.get(cv2.CAP_PROP_FRAME_HEIGHT)
+        self.width = int(self.camera.get(cv2.CAP_PROP_FRAME_WIDTH))
+        self.height = int(self.camera.get(cv2.CAP_PROP_FRAME_HEIGHT))
+        print(f"Camera Initialized: {self.width}x{self.height}")
 
     def __del__(self):
         if self.camera.isOpened():
