@@ -41,7 +41,7 @@ class App:
 
         self.window.configure(bg="gray")
 
-        self.canvas = tk.Canvas(self.window, width=self.camera.width, height=self.camera.height)
+        self.canvas = tk.Canvas(self.window, width=self.camera.width, height=self.camera.height, bg="red")
         self.canvas.pack(side="top", fill="both", expand=True)
         print("Canvas created.")
 
