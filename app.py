@@ -41,11 +41,11 @@ class App:
 
         self.window.configure(bg="gray")
 
-        self.canvas = tk.Canvas(self.window, width=self.camera.width, height=self.camera.height, bg="red")
-        self.canvas.pack(side="top", fill="both", expand=True)
+        self.canvas = tk.Canvas(self.window, width=self.camera.width, height=int(self.camera.height * 0.7), bg="red")
+        self.canvas.pack(side="top", fill="x")
         print("Canvas created.")
 
-        frame_buttons = tk.Frame(self.window, bg="yellow")
+        frame_buttons = tk.Frame(self.window, bg="yellow", height=int(self.camera.height * 0.3))
         frame_buttons.pack(side="bottom", fill="x", pady=10)
 
         self.btn_toggleauto = tk.Button(frame_buttons, text="Toggle Counting", command=self.counting_toggle, **button_style)
