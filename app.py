@@ -10,7 +10,11 @@ class App:
 
     def __init__(self):
         self.window = tk.Tk()
-        self.window.title = "Bicep-Curl Counter"
+        self.window.title("Bicep-Curl Counter")
+        self.window.geometry("600x600")
+        self.window.configure(bg="white")
+        
+        self.window.update_idletasks()
 
         self.counters = [1, 1]
         self.rep_counter = 0
