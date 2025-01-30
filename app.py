@@ -26,7 +26,6 @@ class App:
         self.model = model.Model()
 
         self.counting_enabled = False
-
         self.camera = camera.Camera()
 
         self.init_gui()
@@ -45,6 +44,9 @@ class App:
         self.canvas = tk.Canvas(self.window, width=self.camera.width, height=self.camera.height)
         self.canvas.pack(side="top", fill="both", expand=True)
         print("Canvas created.")
+
+        frame_buttons = tk.Frame(self.window, bg="white")
+        frame_buttons.pack(side="bottom", fill="x", pady=10)
 
         self.btn_toggleauto = tk.Button(self.window, text="Toggle Counting", command=self.counting_toggle, **button_style)
         self.btn_toggleauto.pack(pady=5)
