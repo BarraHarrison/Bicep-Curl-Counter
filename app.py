@@ -39,6 +39,8 @@ class App:
 
         button_style = {"width": 50, "bg": "lightblue", "fg": "black", "font": ("Arial", 12)}
 
+        self.window.configure(bg="gray")
+
         self.canvas = tk.Canvas(self.window, width=self.camera.width, height=self.camera.height)
         self.canvas.pack(side="top", fill="both", expand=True)
         print("Canvas created.")
