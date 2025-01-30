@@ -38,10 +38,10 @@ class App:
         self.window.mainloop()
 
     def init_gui(self):
-        self.canvas = tk.Canvas(self.window, width=self.camera.width, height=self.camera.height)
-        self.canvas.pack()
-
         button_style = {"width": 50, "bg": "lightblue", "fg": "black", "font": ("Arial", 12)}
+
+        self.canvas = tk.Canvas(self.window, width=self.camera.width, height=self.camera.height)
+        self.canvas.pack(side="top", fill="both", expand=True)
 
         self.btn_toggleauto = tk.Button(self.window, text="Toggle Counting", command=self.counting_toggle, **button_style)
         self.btn_toggleauto.pack(anchor=tk.CENTER, expand=True)
