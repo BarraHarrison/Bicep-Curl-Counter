@@ -48,27 +48,27 @@ class App:
         frame_buttons = tk.Frame(self.window, bg="white")
         frame_buttons.pack(side="bottom", fill="x", pady=10)
 
-        self.btn_toggleauto = tk.Button(self.window, text="Toggle Counting", command=self.counting_toggle, **button_style)
+        self.btn_toggleauto = tk.Button(frame_buttons, text="Toggle Counting", command=self.counting_toggle, **button_style)
         self.btn_toggleauto.pack(pady=5)
         print("Toggle button created.")
 
-        self.btn_class_one = tk.Button(self.window, text="Extended", command=lambda: self.save_for_class(1), **button_style)
+        self.btn_class_one = tk.Button(frame_buttons, text="Extended", command=lambda: self.save_for_class(1), **button_style)
         self.btn_class_one.pack(pady=5)
         print("Extended button created.")
 
-        self.btn_class_two = tk.Button(self.window, text="Contracted", command=lambda: self.save_for_class(2), **button_style)
+        self.btn_class_two = tk.Button(frame_buttons, text="Contracted", command=lambda: self.save_for_class(2), **button_style)
         self.btn_class_two.pack(pady=5)
         print("Contracted button created.")
 
-        self.btn_train = tk.Button(self.window, text="Train Model", command=lambda: self.model.train_model(self.counters), **button_style)
+        self.btn_train = tk.Button(frame_buttons, text="Train Model", command=lambda: self.model.train_model(self.counters), **button_style)
         self.btn_train.pack(pady=5)
         print("Train_model button created.")
 
-        self.btn_reset = tk.Button(self.window, text="Reset", command=self.reset, **button_style)
+        self.btn_reset = tk.Button(frame_buttons, text="Reset", command=self.reset, **button_style)
         self.btn_reset.pack(pady=5)
         print("Reset button created.")
 
-        self.counter_label = tk.Label(self.window, text=f"{self.rep_counter}")
+        self.counter_label = tk.Label(frame_buttons, text=f"{self.rep_counter}")
         self.counter_label.config(font=("Arial", 24))
         self.counter_label.pack(anchor=tk.CENTER, expand=True)
         print("Counter label created.")
