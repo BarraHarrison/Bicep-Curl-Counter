@@ -23,7 +23,8 @@ class Camera:
             if ret:
                 return ret, cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             else:
-                return ret, None
-            
-        else:
-            return None
+                print("Warning: Failed to capture frame.")
+                return False, None
+        
+        print("Warning: Camera is not open.")
+        return False, None
