@@ -96,7 +96,12 @@ class App:
         if self.extended and self.contracted:
             self.extended, self.contracted = False, False
             self.rep_counter += 1
-        self.counter_label.config(text=f"{self.rep_counter}")
+        
+        # Checking counter_label exists before updating
+        if hasattr(self, "counter_label") and self.counter_label.winfo_exists():
+            self.counter_label.config(text=f"{self.rep_counter}")
+        else:
+            print("Warning: counter_label does not exist.")
 
         ret, frame = self.camera.get_frame()
         if ret:
