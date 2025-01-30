@@ -45,7 +45,7 @@ class App:
         self.canvas.pack(side="top", fill="both", expand=True)
         print("Canvas created.")
 
-        frame_buttons = tk.Frame(self.window, bg="white")
+        frame_buttons = tk.Frame(self.window, bg="yellow")
         frame_buttons.pack(side="bottom", fill="x", pady=10)
 
         self.btn_toggleauto = tk.Button(frame_buttons, text="Toggle Counting", command=self.counting_toggle, **button_style)
