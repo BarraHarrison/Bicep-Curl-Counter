@@ -41,11 +41,11 @@ class App:
 
         self.window.configure(bg="gray")
 
-        self.canvas = tk.Canvas(self.window, width=self.camera.width, height=int(self.camera.height * 0.7), bg="red")
+        self.canvas = tk.Canvas(self.window, width=self.camera.width, height=int(self.camera.height * 0.7), bg="red", highlightbackground="black", highlightthickness=3)
         self.canvas.pack(side="top", fill="x")
         print("Canvas created.")
 
-        frame_buttons = tk.Frame(self.window, bg="yellow", height=int(self.camera.height * 0.3))
+        frame_buttons = tk.Frame(self.window, bg="yellow", height=int(self.camera.height * 0.3), highlightbackground="blue", highlightthickness=3)
         frame_buttons.pack(side="bottom", fill="x", pady=10)
 
         self.btn_toggleauto = tk.Button(frame_buttons, text="Toggle Counting", command=self.counting_toggle, **button_style)
@@ -68,7 +68,7 @@ class App:
         self.btn_reset.pack(pady=5)
         print("Reset button created.")
 
-        self.counter_label = tk.Label(frame_buttons, text=f"{self.rep_counter}", font=("Arial", 24), bg="white")
+        self.counter_label = tk.Label(frame_buttons, text=f"{self.rep_counter}", font=("Arial", 24), bg="white", highlightbackground="black", highlightthickness=3)
         self.counter_label.pack(pady=5)
         print("Counter label created.")
 
