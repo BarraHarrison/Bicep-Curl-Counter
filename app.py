@@ -69,8 +69,8 @@ class App:
         self.btn_reset.pack(fill="both", expand=True, pady=5)
         print("Reset button created.")
 
-        self.counter_label = tk.Label(frame_buttons, text=f"{self.rep_counter}", font=("Arial", 24), bg="white", highlightbackground="black", highlightthickness=3)
-        self.counter_label.pack(pady=5)
+        self.counter_label = tk.Label(frame_buttons, text=f"{self.rep_counter}", font=("Arial", 24), bg="white")
+        self.counter_label.pack(fill="both", expand=True, pady=5)
         print("Counter label created.")
 
         self.window.update()
