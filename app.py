@@ -42,31 +42,31 @@ class App:
 
         self.window.configure(bg="gray")
 
-        self.canvas = tk.Canvas(self.window, width=self.camera.width, height=int(self.camera.height * 0.7), bg="red", highlightbackground="black", highlightthickness=3)
+        self.canvas = tk.Canvas(self.window, width=self.camera.width, height=int(self.camera.height * 0.7), bg="red")
         self.canvas.pack(side="top", fill="x")
         print("Canvas created.")
 
-        frame_buttons = tk.Frame(self.window, bg="yellow", height=int(self.camera.height * 0.3), highlightbackground="blue", highlightthickness=3)
-        frame_buttons.pack(side="bottom", fill="x", pady=10)
+        frame_buttons = tk.Frame(self.window, bg="yellow")
+        frame_buttons.pack(side="bottom", fill="x", expand=True, pady=10)
 
         self.btn_toggleauto = tk.Button(frame_buttons, text="Toggle Counting", command=self.counting_toggle, **button_style)
-        self.btn_toggleauto.pack(pady=5)
+        self.btn_toggleauto.pack(fill="both", expand=True, pady=5)
         print("Toggle button created.")
 
         self.btn_class_one = tk.Button(frame_buttons, text="Extended", command=lambda: self.save_for_class(1), **button_style)
-        self.btn_class_one.pack(pady=5)
+        self.btn_class_one.pack(fill="both", expand=True, pady=5)
         print("Extended button created.")
 
         self.btn_class_two = tk.Button(frame_buttons, text="Contracted", command=lambda: self.save_for_class(2), **button_style)
-        self.btn_class_two.pack(pady=5)
+        self.btn_class_two.pack(fill="both", expand=True, pady=5)
         print("Contracted button created.")
 
         self.btn_train = tk.Button(frame_buttons, text="Train Model", command=lambda: self.model.train_model(self.counters), **button_style)
-        self.btn_train.pack(pady=5)
+        self.btn_train.pack(fill="both", expand=True, pady=5)
         print("Train_model button created.")
 
         self.btn_reset = tk.Button(frame_buttons, text="Reset", command=self.reset, **button_style)
-        self.btn_reset.pack(pady=5)
+        self.btn_reset.pack(fill="both", expand=True, pady=5)
         print("Reset button created.")
 
         self.counter_label = tk.Label(frame_buttons, text=f"{self.rep_counter}", font=("Arial", 24), bg="white", highlightbackground="black", highlightthickness=3)
