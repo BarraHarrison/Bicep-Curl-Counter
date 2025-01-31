@@ -7,8 +7,11 @@ class App:
         self.window = tk.Tk()
         self.window.title("Bicep-Curl Counter")
         self.window.geometry("600x400")
+        self.window.configure(bg="white")
 
-        self.label = tk.Label(self.window, text="Tkinter is working!", font=("Arial", 16))
+        print("Tkinter is working!")
+
+        self.label = tk.Label(self.window, text="Tkinter is working!", font=("Arial", 16), bg="white")
         self.label.pack(pady=20)
 
         self.window.mainloop()
