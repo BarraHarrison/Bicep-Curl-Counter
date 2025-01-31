@@ -10,11 +10,11 @@ class App:
 
         print("Tkinter is working!")
 
-        self.label = tk.Label(self.window, text="Bicep-Curl Counter", font=("Arial", 14), bg="gray", fg="white")
+        self.label = tk.Label(self.frame_buttons, text="Bicep-Curl Counter", font=("Arial", 14), bg="black", fg="white")
         self.label.pack(pady=10)
 
         self.frame_buttons = tk.Frame(self.window, bg="black")
-        self.frame_buttons.pack(pady=10, fill="both", expand=True)
+        self.frame_buttons.pack(fill="both", expand=True)
 
         self.btn = tk.Button(self.frame_buttons, text="Click here", command=self.on_click, bg="lightblue", font=("Arial", 12))
         self.btn.pack(pady=20)
