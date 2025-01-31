@@ -11,7 +11,10 @@ class App:
 
         print("Tkinter is working!")
 
-        self.label = tk.Label(self.window, text="Tkinter is working!", font=("Arial", 16), bg="white")
+        self.frame = tk.Frame(self.window, bg="lightgray", width=600, height=400)
+        self.frame.pack(fill="both", expand=True)
+
+        self.label = tk.Label(self.window, text="Tkinter is working!", font=("Arial", 16), bg="yellow", fg="black")
         self.label.pack(pady=20)
 
         self.window.mainloop()
