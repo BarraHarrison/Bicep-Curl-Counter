@@ -11,8 +11,8 @@ class App:
     def __init__(self):
         self.window = tk.Tk()
         self.window.title("Bicep-Curl Counter")
-        self.window.geometry("600x600")
-        self.window.configure(bg="white")
+        self.window.geometry("800x600")
+        self.window.configure(bg="gray")
 
         self.counters = [1, 1]
         self.rep_counter = 0
@@ -32,6 +32,7 @@ class App:
         self.update()
 
         self.window.attributes("-topmost", True)
+        self.window.update_idletasks()
         self.window.mainloop()
 
     def init_gui(self):
