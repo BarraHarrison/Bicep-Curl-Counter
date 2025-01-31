@@ -9,7 +9,7 @@ class App:
 
         print("Tkinter is working!")
 
-        self.label = tk.Label(self.window, text="Bicep-Curl Counter", font=("Arial", 14), bg="black", fg="white")
+        self.label = tk.Label(self.window, text="Bicep-Curl Counter", font=("Arial", 14), bg="white", fg="black")
         self.label.pack(pady=10)
 
         self.btn = tk.Button(self.window, text="Click here", command=self.on_click, bg="lightblue", font=("Arial", 12))
