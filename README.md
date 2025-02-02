@@ -7,8 +7,6 @@ The **Bicep-Curl Counter** is a machine learning-based fitness application that 
 
 ## 🏗 Project Structure
 
-### **1️⃣ Purpose of Each File**
-
 - **`main.py`**  
   - The main entry point of the application.  
   - Initializes the GUI and manages execution by integrating camera, ML model, and UI components.
